@@ -13,6 +13,7 @@ public class PingPongVerticles {
           Boolean enabled;
      }
      @Builder
+     @ToString
      static class Pong {
           String message;
           Boolean ack;
@@ -22,7 +23,7 @@ public class PingPongVerticles {
      public static void main(String[] args) {
 	Vertx vert = Vertx.vertx();
           vert.deployVerticle(new PingVerticles(), loggingError());
-          vert.deployVerticle(new PongVerticles()loggingError());
+          vert.deployVerticle(new PongVerticles(), loggingError());
      }
      
      private static Handler<AsyncResult<String>> loggingError() {
@@ -36,29 +37,33 @@ public class PingPongVerticles {
      static class PingVerticles extends AbstractVerticle {
           @Override
           public void start(Promise<Void> startPromise) throws Exception {
-               startPromise.complete();
                Ping ping = Ping.builder().enabled(true).message("ping !").build();
                System.out.println("Sending " + ping );
+     
+               vertx.eventBus().registerDefaultCodec(Ping.class, new LocalMessageCodec<>(Ping.class));
                vertx.eventBus().<Pong>request(PING_PONG_ADDRESS, ping, (res) -> {
                     if (res.failed()){
                          System.err.println("Error " + res.cause().getMessage());
                     }
-                    System.out.println("Receive " + res.result().body());
+                    System.out.println("Receive " + res.result().body().toString());
                });
+               startPromise.complete();
           }
      }
      
      static class PongVerticles extends AbstractVerticle {
           @Override
           public void start(Promise<Void> startPromise) throws Exception {
-               startPromise.complete();
                Pong pong = Pong.builder().ack(true).message("Pong").build();
+     
+               vertx.eventBus().registerDefaultCodec(Pong.class, new LocalMessageCodec<>(Pong.class));
                vertx.eventBus().<Ping>consumer(PING_PONG_ADDRESS, message -> {
                     System.out.println("Receive :" + message.body());
                     message.reply(pong);
                }).exceptionHandler(error -> {
                     System.err.println("Err " + error.getMessage());
                });
+               startPromise.complete();
           }
      }
 }
