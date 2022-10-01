@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6433b8-8644-4885-a963-d79a25c717f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/FuturePromiseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/target/classes/org/dng/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/org/dng/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/org/dng/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/org/dng/MainVerticles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/FuturePromiseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/test/java/FuturePromiseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/org/dng/Main.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,17 @@
       <recent name="org.dng" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FuturePromiseTest.futureCoordination">
+  <component name="RunManager" selected="Application.VertX Laucher">
+    <configuration name="VertX Laucher" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="io.vertx.core.Launcher" />
+      <module name="core" />
+      <option name="PROGRAM_PARAMETERS" value="run org.dng.MainVerticles" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FuturePromiseTest.futureCoordination" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core" />
       <option name="PACKAGE_NAME" value="" />
@@ -112,6 +122,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.VertX Laucher" />
+      <item itemvalue="JUnit.FuturePromiseTest.futureCoordination" />
+      <item itemvalue="JUnit.FuturePromiseTest.futureFail" />
+      <item itemvalue="JUnit.FuturePromiseTest.futureMap" />
+      <item itemvalue="JUnit.FuturePromiseTest.futureSuccess" />
+      <item itemvalue="JUnit.FuturePromiseTest.promiseFailure" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.FuturePromiseTest.futureCoordination" />
@@ -134,7 +152,7 @@
       <workItem from="1663037661846" duration="12000" />
       <workItem from="1664615979299" duration="10297000" />
       <workItem from="1664639407438" duration="1968000" />
-      <workItem from="1664643478509" duration="4028000" />
+      <workItem from="1664643478509" duration="4808000" />
     </task>
     <servers />
   </component>

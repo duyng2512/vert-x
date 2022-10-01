@@ -16,7 +16,7 @@ public class FuturePromiseTest {
      public void promiseSuccess(Vertx vertx, VertxTestContext context) {
 	Promise<String> promise = Promise.promise();
 	log.info("Start");
-	vertx.setTimer(1000L, (id) ->{
+	vertx.setTimer(10L, (id) ->{
 	     promise.complete("Done");
 	     log.info("Done");
 	     context.completeNow();
@@ -34,7 +34,7 @@ public class FuturePromiseTest {
      public void promiseFailure(Vertx vertx, VertxTestContext context) {
 	Promise<String> promise = Promise.promise();
 	log.info("Start");
-	vertx.setTimer(1000L, (id) ->{
+	vertx.setTimer(10L, (id) ->{
 	     promise.fail(new RuntimeException("Error"));
 	     log.info("Failed");
 	     context.completeNow();
@@ -46,7 +46,7 @@ public class FuturePromiseTest {
      public void futureSuccess(Vertx vertx, VertxTestContext context) {
 	Promise<String> promise = Promise.promise();
 	log.info("Start");
-	vertx.setTimer(1000L, (id) ->{
+	vertx.setTimer(10L, (id) ->{
 	     promise.complete("Done");
 	     log.info("Done");
 	     context.completeNow();
@@ -62,7 +62,7 @@ public class FuturePromiseTest {
      public void futureFail(Vertx vertx, VertxTestContext context) {
 	Promise<String> promise = Promise.promise();
 	log.info("Start");
-	vertx.setTimer(1000L, (id) ->{
+	vertx.setTimer(10L, (id) ->{
 	     promise.fail("Fail");
 	     log.info("Done");
 	     context.completeNow();
@@ -79,7 +79,7 @@ public class FuturePromiseTest {
 	Promise<String> promise = Promise.promise();
 	
 	log.info("Start Promise");
-	vertx.setTimer(500L, (id) ->{
+	vertx.setTimer(10, (id) ->{
 	     promise.complete("Done");
 	     log.info("Done Promise");
 	     context.completeNow();
@@ -96,7 +96,7 @@ public class FuturePromiseTest {
      public void futureCoordination(Vertx vertx, VertxTestContext context) {
 	vertx.createHttpServer()
 	     .requestHandler(serverRequest -> log.info("Incoming Request {}", serverRequest))
-	     .listen(1000)
+	     .listen(10)
 	     .compose(httpServer -> {
 		log.info("Additional Info");
 		return Future.succeededFuture(httpServer);
