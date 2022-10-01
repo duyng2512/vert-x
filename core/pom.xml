@@ -18,34 +18,45 @@
         <exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
 
         <vertx.version>4.3.3</vertx.version>
-        <junit-jupiter.version>5.7.0</junit-jupiter.version>
+        <junit-jupiter.version>5.9.0</junit-jupiter.version>
 
-        <main.verticle>com.dng.reactive.vert_x.MainVerticle</main.verticle>
+        <main.verticle>com.dng.Main</main.verticle>
         <launcher.class>io.vertx.core.Launcher</launcher.class>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.vertx</groupId>
-                <artifactId>vertx-stack-depchain</artifactId>
-                <version>${vertx.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <dependencies>
+    <dependencies><!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.82.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-stack-depchain</artifactId>
+            <version>${vertx.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
+            <version>4.3.3</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version>
+        </dependency><!-- https://mvnrepository.com/artifact/io.vertx/vertx-junit5 -->
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-junit5</artifactId>
+            <version>4.3.3</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jcabi</groupId>
+            <artifactId>jcabi-log</artifactId>
+            <version>0.17.1</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -64,7 +75,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
