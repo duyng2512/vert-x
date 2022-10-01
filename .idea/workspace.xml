@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6433b8-8644-4885-a963-d79a25c717f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/org/dng/eventbus/RequestResponseBus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/org/dng/codec/PingPongVerticles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/org/dng/eventbus/PointToPointBus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/org/dng/eventbus/PubToSubBus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,16 +55,57 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.dng.codec" />
+      <recent name="org.dng.eventbus" />
       <recent name="org.dng" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RequestResponseBus">
+  <component name="RunManager" selected="Application.PingPongVerticles">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dng.Main" />
       <module name="core" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.dng.vertices.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PingPongVerticles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dng.codec.PingPongVerticles" />
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dng.codec.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PointToPointBus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dng.eventbus.PointToPointBus" />
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dng.eventbus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PubToSubBus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.dng.eventbus.PubToSubBus" />
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dng.eventbus.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -85,6 +128,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PingPongVerticles" />
+        <item itemvalue="Application.PubToSubBus" />
+        <item itemvalue="Application.PointToPointBus" />
         <item itemvalue="Application.RequestResponseBus" />
         <item itemvalue="Application.org.dng.Main" />
       </list>
@@ -100,7 +146,7 @@
       <updated>1662997593912</updated>
       <workItem from="1662997597132" duration="1737000" />
       <workItem from="1663037661846" duration="12000" />
-      <workItem from="1664615979299" duration="6467000" />
+      <workItem from="1664615979299" duration="9174000" />
     </task>
     <servers />
   </component>
