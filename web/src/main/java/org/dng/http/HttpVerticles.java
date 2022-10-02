@@ -6,9 +6,12 @@ import io.vertx.ext.web.Router;
 import lombok.extern.slf4j.Slf4j;
 import org.dng.http.api.AssetsApi;
 import org.dng.http.api.ExceptionApi;
+import org.dng.http.api.QuotesApi;
 
 @Slf4j
 public class HttpVerticles extends AbstractVerticle {
+     
+     public static final int PORT = 8888;
      
      @Override
      public void start(Promise<Void> startPromise) throws Exception {
@@ -18,14 +21,14 @@ public class HttpVerticles extends AbstractVerticle {
 	// Attach to router multiple endpoint
 	AssetsApi.attach(router);
 	ExceptionApi.attach(router);
-	
+	QuotesApi.attach(router);
 	
 	log.info("Init HTTP Server...");
 	// Multiple instance will have the same config
 	vertx.createHttpServer()
 	     .requestHandler(router)
 	     .exceptionHandler(err -> log.error("Get Error", err))
-	     .listen(8888,
+	     .listen(PORT,
 		http -> {
 		     if (http.succeeded()) {
 			startPromise.complete();

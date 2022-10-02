@@ -1,7 +1,6 @@
 package org.dng.http.api;
 
 import io.vertx.core.json.JsonArray;
-import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

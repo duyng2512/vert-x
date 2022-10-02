@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6433b8-8644-4885-a963-d79a25c717f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/BoostrapVerticles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/HttpVerticles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/AssetsApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/ExceptionApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/QuotesApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/test/java/org/dng/WebClientTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/HttpVerticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/HttpVerticles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/AssetsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/AssetsApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -51,6 +48,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "11",
     "last_opened_file_path": "/Users/lap15740-local/Downloads/Coding/Local/vert-x/web/src/main/resources",
     "nodejs_package_manager_path": "npm",
@@ -64,13 +63,20 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/main/resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.dng" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.dng.http.api" />
       <recent name="org.dng.codec" />
       <recent name="org.dng.eventbus" />
       <recent name="org.dng" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.VertX Web">
+  <component name="RunManager" selected="JUnit.WebClientTest.returnQuote">
     <configuration name="VertX Laucher" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -121,21 +127,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FuturePromiseTest.futureSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FuturePromiseTest" />
-      <option name="METHOD_NAME" value="futureSuccess(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
+    <configuration name="WebClientTest.returnAllAssets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dng" />
+      <option name="MAIN_CLASS_NAME" value="org.dng.WebClientTest" />
+      <option name="METHOD_NAME" value="returnAllAssets(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FuturePromiseTest.promiseFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FuturePromiseTest" />
-      <option name="METHOD_NAME" value="promiseFailure(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
+    <configuration name="WebClientTest.returnQuote" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dng" />
+      <option name="MAIN_CLASS_NAME" value="org.dng.WebClientTest" />
+      <option name="METHOD_NAME" value="returnQuote(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,19 +162,19 @@
     <list>
       <item itemvalue="Application.VertX Laucher" />
       <item itemvalue="Application.VertX Web" />
+      <item itemvalue="JUnit.WebClientTest.returnAllAssets" />
+      <item itemvalue="JUnit.WebClientTest.returnQuote" />
       <item itemvalue="JUnit.FuturePromiseTest.futureCoordination" />
       <item itemvalue="JUnit.FuturePromiseTest.futureFail" />
       <item itemvalue="JUnit.FuturePromiseTest.futureMap" />
-      <item itemvalue="JUnit.FuturePromiseTest.futureSuccess" />
-      <item itemvalue="JUnit.FuturePromiseTest.promiseFailure" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebClientTest.returnQuote" />
+        <item itemvalue="JUnit.WebClientTest.returnAllAssets" />
         <item itemvalue="JUnit.FuturePromiseTest.futureCoordination" />
         <item itemvalue="JUnit.FuturePromiseTest.futureMap" />
         <item itemvalue="JUnit.FuturePromiseTest.futureFail" />
-        <item itemvalue="JUnit.FuturePromiseTest.futureSuccess" />
-        <item itemvalue="JUnit.FuturePromiseTest.promiseFailure" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +190,9 @@
       <workItem from="1663037661846" duration="12000" />
       <workItem from="1664615979299" duration="10297000" />
       <workItem from="1664639407438" duration="1968000" />
-      <workItem from="1664643478509" duration="10114000" />
+      <workItem from="1664643478509" duration="10199000" />
+      <workItem from="1664693018383" duration="599000" />
+      <workItem from="1664699957014" duration="3528000" />
     </task>
     <servers />
   </component>
