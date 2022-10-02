@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6433b8-8644-4885-a963-d79a25c717f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/QuotesApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/test/java/org/dng/WebClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/WatchListApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/CreateWatchListHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/DeleteArrWatchListHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/DeleteSingleWatchListHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/GetAssetHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/GetWatchListHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/QuoteGetHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/object/Asset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/object/Quote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/object/WatchStock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/test/java/org/dng/MapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/HttpVerticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/HttpVerticles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/AssetsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/AssetsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/QuotesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/QuotesApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/test/java/org/dng/WebClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/test/java/org/dng/WebClientTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +30,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -70,13 +83,14 @@
       <recent name="org.dng" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.dng.http.handler" />
+      <recent name="org.dng" />
       <recent name="org.dng.http.api" />
       <recent name="org.dng.codec" />
       <recent name="org.dng.eventbus" />
-      <recent name="org.dng" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WebClientTest.returnQuote">
+  <component name="RunManager" selected="Application.VertX Web">
     <configuration name="VertX Laucher" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -97,31 +111,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FuturePromiseTest.futureCoordination" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FuturePromiseTest" />
-      <option name="METHOD_NAME" value="futureCoordination(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="rest-api | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="FuturePromiseTest.futureFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FuturePromiseTest" />
-      <option name="METHOD_NAME" value="futureFail(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FuturePromiseTest.futureMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FuturePromiseTest" />
-      <option name="METHOD_NAME" value="futureMap(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
+    <configuration name="MapTest.testHashMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dng" />
+      <option name="MAIN_CLASS_NAME" value="org.dng.MapTest" />
+      <option name="METHOD_NAME" value="testHashMap" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,22 +162,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebClientTest.testHashMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dng.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dng" />
+      <option name="MAIN_CLASS_NAME" value="org.dng.WebClientTest" />
+      <option name="METHOD_NAME" value="testHashMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.VertX Laucher" />
       <item itemvalue="Application.VertX Web" />
+      <item itemvalue="HTTP Request.rest-api | #1" />
+      <item itemvalue="JUnit.MapTest.testHashMap" />
       <item itemvalue="JUnit.WebClientTest.returnAllAssets" />
       <item itemvalue="JUnit.WebClientTest.returnQuote" />
-      <item itemvalue="JUnit.FuturePromiseTest.futureCoordination" />
-      <item itemvalue="JUnit.FuturePromiseTest.futureFail" />
-      <item itemvalue="JUnit.FuturePromiseTest.futureMap" />
+      <item itemvalue="JUnit.WebClientTest.testHashMap" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MapTest.testHashMap" />
+        <item itemvalue="JUnit.WebClientTest.testHashMap" />
+        <item itemvalue="HTTP Request.rest-api | #1" />
         <item itemvalue="JUnit.WebClientTest.returnQuote" />
         <item itemvalue="JUnit.WebClientTest.returnAllAssets" />
-        <item itemvalue="JUnit.FuturePromiseTest.futureCoordination" />
-        <item itemvalue="JUnit.FuturePromiseTest.futureMap" />
-        <item itemvalue="JUnit.FuturePromiseTest.futureFail" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +211,7 @@
       <workItem from="1664639407438" duration="1968000" />
       <workItem from="1664643478509" duration="10199000" />
       <workItem from="1664693018383" duration="599000" />
-      <workItem from="1664699957014" duration="3528000" />
+      <workItem from="1664699957014" duration="14400000" />
     </task>
     <servers />
   </component>

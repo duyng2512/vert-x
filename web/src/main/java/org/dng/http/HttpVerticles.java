@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.dng.http.api.AssetsApi;
 import org.dng.http.api.ExceptionApi;
 import org.dng.http.api.QuotesApi;
+import org.dng.http.api.WatchListApi;
 
 @Slf4j
 public class HttpVerticles extends AbstractVerticle {
@@ -22,6 +23,7 @@ public class HttpVerticles extends AbstractVerticle {
 	AssetsApi.attach(router);
 	ExceptionApi.attach(router);
 	QuotesApi.attach(router);
+	WatchListApi.attach(router);
 	
 	log.info("Init HTTP Server...");
 	// Multiple instance will have the same config
