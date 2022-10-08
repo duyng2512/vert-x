@@ -15,7 +15,7 @@ import static io.netty.handler.codec.http.HttpHeaders.Values.APPLICATION_JSON;
 
 @Slf4j
 public class WatchListApi {
-     
+     private WatchListApi(){}
      static public final Map<String, Set<WatchStock>> WatchListStore = new HashMap<>();
      
      public static void attach(Router router){

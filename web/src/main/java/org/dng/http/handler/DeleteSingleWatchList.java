@@ -24,12 +24,10 @@ public class DeleteSingleWatchList implements Handler<RoutingContext> {
 	} else {
 	     boolean isRemoved = WatchListStore.get(accountID)
 		.removeIf(watchStock -> watchStock.name.equals(stockName));
-	     if (isRemoved)
-		context.response()
+	     if (isRemoved) context.response()
 		     .setStatusCode(202)
 		     .end();
-	     else
-		context.response()
+	     else context.response()
 		     .setStatusCode(400)
 		     .end(JsonObject.of("message", stockName + " not found").toBuffer());
 	}

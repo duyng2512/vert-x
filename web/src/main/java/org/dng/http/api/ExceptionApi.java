@@ -6,7 +6,7 @@ import org.dng.http.handler.ProcessException;
 
 @Slf4j
 public class ExceptionApi {
-     
+     private ExceptionApi(){}
      public static void attach(Router router){
           router.route().failureHandler(new ProcessException());
      }

@@ -10,4 +10,5 @@ public class AssetsApi {
 	router.get("/assets").handler(new GetAsset());
      }
      
+     private AssetsApi(){};
 }
