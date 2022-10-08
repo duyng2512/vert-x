@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6433b8-8644-4885-a963-d79a25c717f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/results.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/test/java/org/dng/vegeta.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/config/BrokerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/config/ConfigLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/BoostrapVerticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/BoostrapVerticles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/HttpVerticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/HttpVerticles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/AssetsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/AssetsApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/QuotesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/api/QuotesApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/DeleteArrWatchList.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/DeleteArrWatchList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/DeleteSingleWatchList.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/org/dng/http/handler/DeleteSingleWatchList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/test/java/org/dng/WebClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/test/java/org/dng/WebClientTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +62,13 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.3&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Lombok&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.dng.http.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/main/resources" />
     </key>
@@ -98,6 +100,10 @@
     <configuration name="VertX Web" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="SERVER_PORT" value="8888" />
+        <env name="INSTANCE_NAME" value="Vertx-Web" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="io.vertx.core.Launcher" />
       <module name="web" />
       <option name="PROGRAM_PARAMETERS" value="run org.dng.BoostrapVerticles" />
@@ -124,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebClientTest.returnAllAssets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WebClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="web" />
       <extension name="coverage">
         <pattern>
@@ -134,8 +140,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.dng" />
       <option name="MAIN_CLASS_NAME" value="org.dng.WebClientTest" />
-      <option name="METHOD_NAME" value="returnAllAssets(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,18 +181,18 @@
       <item itemvalue="Application.VertX Laucher" />
       <item itemvalue="Application.VertX Web" />
       <item itemvalue="HTTP Request.rest-api | #1" />
+      <item itemvalue="JUnit.WebClientTest" />
       <item itemvalue="JUnit.MapTest.testHashMap" />
-      <item itemvalue="JUnit.WebClientTest.returnAllAssets" />
       <item itemvalue="JUnit.WebClientTest.returnQuote" />
       <item itemvalue="JUnit.WebClientTest.testHashMap" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WebClientTest" />
         <item itemvalue="JUnit.MapTest.testHashMap" />
         <item itemvalue="JUnit.WebClientTest.testHashMap" />
         <item itemvalue="HTTP Request.rest-api | #1" />
         <item itemvalue="JUnit.WebClientTest.returnQuote" />
-        <item itemvalue="JUnit.WebClientTest.returnAllAssets" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +216,8 @@
       <workItem from="1664823446233" duration="270000" />
       <workItem from="1664851856173" duration="40000" />
       <workItem from="1665117530495" duration="173000" />
-      <workItem from="1665209335591" duration="1383000" />
+      <workItem from="1665209335591" duration="1465000" />
+      <workItem from="1665218020517" duration="3917000" />
     </task>
     <servers />
   </component>

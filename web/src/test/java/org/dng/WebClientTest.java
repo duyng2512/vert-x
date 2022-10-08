@@ -8,6 +8,7 @@ import io.vertx.junit5.VertxTestContext;
 import jnr.constants.platform.INAddr;
 import lombok.extern.slf4j.Slf4j;
 import org.dng.http.HttpVerticles;
+import org.dng.http.config.ConfigLoader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,6 +25,9 @@ class WebClientTest {
      
      @BeforeEach
      void setUp (Vertx vertx, VertxTestContext context) {
+          System.setProperty(ConfigLoader.INSTANCE_NAME, "Test-Instance");
+          System.setProperty(ConfigLoader.SERVER_PORT, "9000");
+          
           vertx.deployVerticle(new BoostrapVerticles())
                .onSuccess(s -> log.info("Success Deploy Verticles"))
                .andThen(r -> context.completeNow());
@@ -42,9 +46,9 @@ class WebClientTest {
                     log.info("Res {}", json);
                     
                     Assertions.assertNotNull(json);
-                    Assertions.assertEquals("[{\"name\":\"FLC\",\"price\":1000},{\"name\":\"GAS\",\"price\":2000}]", json.encode());
+                    Assertions.assertEquals("[{\"name\":\"FLC\",\"price\":1000},{\"name\":\"GAS\",\"price\":2000},{\"name\":\"POM\",\"price\":20100}]", json.encode());
                     Assertions.assertEquals(200, res.statusCode());
-                    Assertions.assertEquals(2, res.bodyAsJsonArray().getList().size());
+                    Assertions.assertEquals(3, res.bodyAsJsonArray().getList().size());
                     
                     context.completeNow();
                }));

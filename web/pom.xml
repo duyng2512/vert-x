@@ -26,9 +26,13 @@
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-web-client</artifactId>
-            <version>4.3.3</version>
+            <version>${vertx-web-client.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-config</artifactId>
+            <version>${vertx-config.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -39,9 +43,11 @@
 
     </dependencies>
     <properties>
-        <vertx-web.version>4.3.3</vertx-web.version>
+        <vertx-web.version>4.3.4</vertx-web.version>
         <jackson-databind.version>2.13.4</jackson-databind.version>
         <junit-jupiter-api.version>5.9.1</junit-jupiter-api.version>
+        <vertx-web-client.version>4.3.4</vertx-web-client.version>
+        <vertx-config.version>4.3.4</vertx-config.version>
     </properties>
 
 </project>

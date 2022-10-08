@@ -13,7 +13,6 @@ public class BoostrapVerticles extends AbstractVerticle {
 	DeploymentOptions options = new DeploymentOptions();
 	options.setInstances(Runtime.getRuntime().availableProcessors());
 	
-	
 	vertx.deployVerticle(HttpVerticles.class.getName(), options)
 	     .onSuccess(s -> log.info("Deployed verticles with id {}", s))
 	     .onFailure(s -> log.error("Fail to deploy verticles", s));
